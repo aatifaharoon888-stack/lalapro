@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diva Studio · Finesse</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/finesse.css">
+</head><body>
+<div class="app-shell">
+  <div id="sidebar-slot"></div>
+  <main class="app-main">
+    <div class="app-top">
+      <div><span class="eyebrow">Compose</span><h1>Diva Studio</h1></div>
+      <div class="right">
+        <button class="btn-icon" onclick="rotateMannequin(-1)" title="Rotate left">↺</button>
+        <button class="btn-icon" onclick="rotateMannequin(1)" title="Rotate right">↻</button>
+        <button class="btn btn-ghost" onclick="autoCompose()">✦ Auto-style</button>
+        <button class="btn btn-gold" onclick="saveOutfit()">Save Look</button>
+      </div>
+    </div>
+
+    <div class="diva-wrap">
+      <div class="mannequin" id="mannequin">
+        <svg viewBox="0 0 200 320" fill="none" stroke="#c8a96a" stroke-width="1.2" stroke-linejoin="round">
+          <circle cx="100" cy="40" r="22"/>
+          <path d="M70 75 Q100 65 130 75 L140 150 Q140 170 130 180 L120 280 L110 310 H90 L80 280 L70 180 Q60 170 60 150 Z"/>
+          <line x1="60" y1="150" x2="35" y2="220"/>
+          <line x1="140" y1="150" x2="165" y2="220"/>
+        </svg>
+        <div class="slot top" data-slot="top" data-label="TOP">TOP</div>
+        <div class="slot bottom" data-slot="bottom" data-label="BOTTOM">BOTTOM</div>
+        <div class="slot shoes" data-slot="shoes" data-label="SHOES">SHOES</div>
+        <div class="slot acc" data-slot="acc" data-label="ACC">ACC</div>
+      </div>
+
+      <div class="diva-side">
+        <h3>Your Closet</h3>
+        <p class="muted" style="font-size:.85rem;margin-bottom:1rem">Drag pieces onto the mannequin.</p>
+        <div class="diva-pool" id="diva-pool"></div>
+        <div class="diva-actions">
+          <button class="btn btn-ghost" onclick="clearLook()" style="flex:1;justify-content:center">Clear</button>
+        </div>
+        <div class="card" style="margin-top:1.5rem">
+          <h4 style="font-family:var(--font-display);margin-bottom:.5rem">Stylist tip</h4>
+          <p class="muted" style="font-size:.85rem">Pair gold accessories with ivory and beige for an editorial daytime look.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<div id="floating-slot"></div>
+<script src="js/finesse.js"></script>
+<script>document.getElementById('sidebar-slot').outerHTML = F.renderChrome('diva');</script>
+<script src="js/diva.js"></script>
+</body></html>
