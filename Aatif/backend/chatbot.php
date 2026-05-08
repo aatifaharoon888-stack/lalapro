@@ -75,7 +75,7 @@ Rules:
 PROMPT;
 
 /* ── call Anthropic API ─────────────────────────────────────────── */
-$apiKey = defined('ANTHROPIC_API_KEY') ? ANTHROPIC_API_KEY : '';
+$apiKey = defined('ANTHROPIC_API_KEY') ? ANTHROPIC_API_KEY :'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';
 
 if (!empty($apiKey)) {
 
@@ -184,4 +184,3 @@ function keywordReply(string $msg): string
     // Default
     return "I'm Finesse — your personal AI stylist. Ask me about outfit ideas, color pairings, occasion dressing, or how to use the studio. ✨";
 }
- 
