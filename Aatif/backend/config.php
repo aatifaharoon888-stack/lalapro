@@ -43,4 +43,4 @@ define('WEATHER_API_KEY', '');   // e.g. 'abc123def456...'
  *
  * Leave empty '' to use the keyword-based fallback chatbot.
  */
-define('ANTHROPIC_API_KEY', '');  // ← paste your key here: 'sk-ant-api03-...'
+define('ANTHROPIC_API_KEY', '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');  // ← paste your key here: 'sk-ant-api03-...'
